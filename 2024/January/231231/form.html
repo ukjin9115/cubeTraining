@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="form.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <title>Document</title>
+</head>
+<body>
+
+    <form class="container my-5 form-group" id="group">
+        <p>상품선택</p>
+        <select class="form-select mt-2"  id="productForm">
+          <option>모자</option>
+          <option>셔츠</option>
+          <option>바지</option>
+
+        </select>
+
+        <select class="form-select mt-2 show" id="sizeForm">
+            
+          </select>
+    </form>
+
+    <div id="test">
+
+    </div>
+
+    
+    <script>    
+
+
+        // let a = document.createElement('button');
+
+        // a.innerHTML = '안녕'
+        // document.getElementById('test').appendChild(a);
+
+
+        // let 템플릿 = '<p>바보</p>'
+        // $('#test').append(템플릿);
+
+        let 바지사이즈 = `<option>28</option>
+        <option>30</option>`
+        let 셔츠사이즈 = '<option>95</option><option>100</option>'
+        let pants = [28, 30, 32 ,54];  
+        let shirts = [95, 100, 105, 110] ;
+
+        $('#productForm').on('change',function(){
+            if(this.value == '셔츠'){        
+              $('#sizeForm').html('').removeClass('show');      
+              shirts.forEach(function(data){
+                  console.log(data);
+                    $('#sizeForm').append(`<option>${data}</option>`)
+                })
+            }else if(this.value == '바지'){
+                $('#sizeForm').html('').removeClass('show');
+                pants.forEach(function(a){
+                  console.log(a);
+                    $('#sizeForm').append(`<option>${a}</option>`)
+                })
+            }else if(this.value == '모자'){
+                $('#sizeForm').addClass('show');
+                
+            }
+        })
+
+        
+        
+    </script>
+
+    <script>
+        
+        
+
+        function 점수합(arr,b){
+          let result = 0; 
+          
+          for( let i =0; i<arr.length ; i++){
+            result = result + arr[i];
+          }result = result/arr.length;
+          console.log(result);
+
+          if(result>b){
+            console.log('너 공부 안했구나?')
+          }else{
+            console.log('공부좀했네요~')
+          }
+        }
+
+        // function 점수비교(모1평균,a){
+          
+        //   let n = 모1평균- a
+        //   if(모1평균>a){
+        //     console.log('평균보다  떨어졌네요')
+
+        //   }else{
+        //     console.log('평균보다 올랐네요');
+        //   }
+        // }
+          
+
+
+
+
+
+        // function 구구단(k){
+        //   for(let i =1; i<10; i++ ){
+        //     console.log(k*i);
+        //   }
+        // }
+
+
+        // }
+
+        // function 구구단(){
+        //   for(let i =2; i<10; i++){
+        //     for(let k =1; k<10; k++){
+        //       console.log(k*i);
+        //     }
+        //   }
+        // }
+
+
+
+
+      // function 찾기(hi){
+
+      //   for(let i=0; i<4; i++){
+      //     if(출석부[i]== hi){
+      //     console.log("딱걸렸누!")
+      //   }
+      //  }
+        
+      // }
+      // let 출석부 = ['흥민', '영희', '철수', '재석'];
+
+      // function 이름찾기(name){
+      //   출석부.forEach(function(a){
+      //     if(name == a){
+      //     console.log('찾았다!');
+      //     return;
+      //     }
+      //   })      
+        
+      // }
+
+      
+      
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+
+  
+</body>
+</html>
