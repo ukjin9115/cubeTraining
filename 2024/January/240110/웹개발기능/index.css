@@ -1,0 +1,82 @@
+body{
+  background-color:gainsboro;
+}
+
+.upBar{
+  display: flex;
+  height: 60px;
+  color: white;
+  font-size: 25px;
+  padding: 7px;
+  background-color:slategray;
+  
+}
+
+.upBarBt{
+  margin-left: 34px;
+}
+
+.input{
+  padding: 15px;
+  margin-left: 5px;
+}
+.inputBar{
+  height: 60px;
+
+}
+.container{
+  width: 100%;
+  height: 400px;
+}
+
+.product{
+  height: 310px;
+  width: 205px;
+  background-color: white;
+  padding: 1px;
+  margin-left: 17px;
+  float: left;
+}
+
+.image-box img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;  
+}
+
+.buyBt{
+  border: 2px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 20;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-left: 5px;
+}
+
+
+.st-background{
+  width: 90%;
+  height: 300px;
+  margin: auto;
+  background-color: beige;
+}
+.wkdqkrnsl{
+  padding: 10px;
+  
+  
+}
+.wkdqkrnsl p{
+  margin-left: 40px;
+  
+}
+.storage{
+  width: 90%;
+  height: 80%;
+  background-color: #000;
+  margin: auto;
+  color: white;
+  text-align: center;
+  line-height: 250px
+}
